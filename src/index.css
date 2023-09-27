@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap" rel="stylesheet');
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400;
+  /*font-size: 20px !important;*/
+}
+/* using !important for quick around, not recommended */
+h1, h2, h3, h4 {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700 !important;
+}
+h1{
+  font-size: 36px !important;
+}
+h2 {
+  font-size: 28px !important;
+}
+h3 {
+  font-size: 22px;
+}
+a, a:hover, a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+h4 {
+  font-size: 12px;
+}
+img {
+  max-width: 100%;
+}
+
+.red-box {
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+.app-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  letter-spacing: .05em;
+  color: #ffffff;
+  opacity: .75;
+}
+.header {
+  background-color: #283593;
+  padding: 10px 0 10px;
+  height: 90px;
+}
+.header-nav-stripe {
+  background-color: #1A237E;
+  font-weight: bolder;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff99;
+  padding: 10px 0 10px;
+  text-align: right;
+}
+.header-stripe-nav-link {
+
+}
+.footer {
+  background-color: #171923;
+  padding: 10px 0 10px;
+  border-bottom: 1px solid #333333;
+  height: 50px;
+}
+.footer-note {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  color: #ffffff;
+}
+.accent-text{
+  color: #01579B;
+}
+.accent-bg {
+  background-color: #01579B !important;
+}
+.loader-container{
+  width: 100vw;
+  height: 100vh;
+  /*background-color: #ffffff;*/
+  display: flex;
+  align-content: center;
+  position: fixed;
+  top:0;
+  left: 0;
+}
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  width: 100px;
+  height: 100px;
+  animation: spin 500ms alternate infinite;
+  margin-left: auto;
+  margin-right: auto;
+}
+.listing-item-title {
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #1A237E;
+}
+.listing-item-desc {
+  font-size: 16px;
+}
+.listing-item-bid {
+  font-size: 14px;
+  font-weight: bolder;
+  color: #D50000;
+}.listing-item-deadline {
+  font-size: 13px;
+  font-weight: bolder;
+}
+ .table-listing {
+   /*font-size: 14px;*/
+   /*font-weight: bold;*/
+   font-weight: 500;
+   letter-spacing: .05em;
+   /*text-transform: uppercase;*/
+ }
+.listing-card {
+  animation-name: fade-in;
+  /*padding: 15px 20px 15px 20px;*/
+  /*color: #CE93D8;*/
+  animation-duration: 300ms;
+  /*background-color: #171923;*/
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 576px) {
+  .profile-table { font-size: 14px;}
+  .profile-picture-xs {
+    height: 150px;
+  }
+  .profile-search-name {
+    font-size: 16px;
+  }
+  .card {padding: 0;}
+}

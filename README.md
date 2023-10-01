@@ -2,6 +2,12 @@
 
 
 
+## My Take:
+
+- The decision to utilize React JS with TypeScript for the frontend was a strategic one, driven by the assessment requirements and the need for a modern, robust framework.
+- I chose Laravel 10 for the auction app backend because of its extensive feature set. Additionally, using multiple languages to collaborate within a single app is enjoyable for me.
+- While the application's UI may appear minimalistic, our primary objective was to deliver robust functionality and a seamless user experience.
+
 ## Bidding Features:
 
 - The **Auction Demo App** is a platform designed for conducting online item auctions.
@@ -113,8 +119,48 @@
 
 These database tables and their respective fields are designed to support the functionality of auction application, including item listings, bidding, user accounts, and wallet management. The foreign key relationships ensure data integrity and proper associations between entities.
 
-## My Take:
+## Directory Structure
+<pre>
+root/ (Installation Directory)
+├── src/
+│   ├── components/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Layout.tsx
+│   │   ├── Home.tsx
+│   │   ├── ItemCreate.tsx (Auction Item Creation Code)
+│   │   ├── ItemListing.tsx (Auction Item Listing Code)
+│   │   ├── ItemShow.tsx (Item Details and Bid Raising Code)
+│   │   ├── LoadSpinner.tsx (Data Loading Indicator)
+│   │   ├── SignIn.tsx (User Sign-In Form)
+│   │   ├── SignUp.tsx (User Sign-Up Form)
+│   │   ├── UserAccount.tsx (User Account Details and Wallet Top-Up Code)
+│   │   └── __test__/ (Unit Tests)
+│   │       ├── ItemCreate.test.tsx
+│   │       ├── ItemListing.test.tsx
+│   │       ├── ItemShow.test.tsx
+│   │       ├── SignIn.test.tsx
+│   │       ├── SignUp.test.tsx
+│   │       └── UserAccount.test.tsx
+│   ├── helpers/ (Helper Functions)
+│   │   ├── checkLogin.ts (Check if the user is logged in or not)
+│   │   └── jwt.ts (Get Saved Data from Local Storage)
+│   ├── images/ (In-App Assets)
+│   │   ├── logo.png
+│   │   └── ...
+│   ├── interfaces/ (Interfaces for Type Checking)
+│   │   └── index.ts
+│   ├── pages/
+│   │   ├── ErrorPage.tsx (Default 404 Error Page)
+│   │   ├── Home.tsx
+│   │   └── Layout.tsx (App Page Composition Code)
+│   └── config.ts (Backend Requests URLs)
+└── .env (Define Backend Base URL
+</pre>
+### Backend Note:
 
-- The decision to utilize React JS with TypeScript for the frontend was a strategic one, driven by the assessment requirements and the need for a modern, robust framework.
-- Laravel 10 was chosen for the backend due to its extensive feature set and well-established reputation in the developers community.
-- While the application's UI may appear minimalistic, our primary objective was to deliver robust functionality and a seamless user experience.
+Add the following line to your crontab file, replacing **/path-to-your-auction-app** with the actual path to your to installation directory. Now, "auction:conclude" command will run every minute as scheduled. Make sure to monitor the logs to ensure that the command is executing as expected.
+<pre>* * * * * cd /path-to-auction-app && php artisan schedule:run >> /dev/null 2>&1</pre>
+
+
+

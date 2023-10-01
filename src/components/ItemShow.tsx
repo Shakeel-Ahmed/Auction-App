@@ -70,35 +70,38 @@ const ItemShow = (): React.ReactElement => {
                                 <hr />
                                 <p className="listing-item-bid">HIGHEST BID: ${item.highest}</p>
                                 <p className="listing-item-desc">{item.description}</p>
-                                <hr />
-                                <p className="listing-item-deadline text-center">DEADLINE: {item.expiry}</p>
-                                <Form method="post" ref={theForm}>
-                                    <div className="form-floating mt-3">
-                                        <input
-                                            type="number"
-                                            name="theAmount"
-                                            min={item.highest + 10}
-                                            className="form-control"
-                                            placeholder="Password"
-                                            required
-                                        />
-                                        <label htmlFor="floatingInput">Amount</label>
-                                        <div className="text-center">
-                                            <button className="w-100 btn btn-primary mt-4 p-3 fw-bolder" type="submit">
-                                                R A I S E
-                                            </button>
-                                        </div>
-                                        {action ? (action.success === true ? (
-                                            <div className="text-center text-uppercase text-success fw-bolder mt-3" style={{ fontSize: "14px" }}>
-                                                {message}
+                                { item.publish === 1
+                                    ? (<>
+                                        <hr />
+                                        <p className="listing-item-deadline text-center">DEADLINE: {item.expiry}</p>                                        <Form method="post" ref={theForm}>
+                                            <div className="form-floating mt-3">
+                                                <input
+                                                    type="number"
+                                                    name="theAmount"
+                                                    min={item.highest + 10}
+                                                    className="form-control"
+                                                    placeholder="Password"
+                                                    required
+                                                />
+                                                <label htmlFor="floatingInput">Amount</label>
+                                                <div className="text-center">
+                                                    <button className="w-100 btn btn-primary mt-4 p-3 fw-bolder" type="submit">
+                                                        R A I S E
+                                                    </button>
+                                                </div>
+                                                {action ? (action.success === true ? (
+                                                    <div className="text-center text-uppercase text-success fw-bolder mt-3" style={{ fontSize: "14px" }}>
+                                                        {message}
+                                                    </div>
+                                                ) : (
+                                                    <div className="text-center text-uppercase text-danger fw-bolder mt-3" style={{ fontSize: "14px" }}>
+                                                        {message}
+                                                    </div>
+                                                )) : ''}
                                             </div>
-                                        ) : (
-                                            <div className="text-center text-uppercase text-danger fw-bolder mt-3" style={{ fontSize: "14px" }}>
-                                                {message}
-                                            </div>
-                                        )) : ''}
-                                    </div>
-                                </Form>
+                                        </Form>
+                                    </>)
+                                    : ''}
                             </div>
                         </div>
                         <div className="text-center">

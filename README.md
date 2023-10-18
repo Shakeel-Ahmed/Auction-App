@@ -1,10 +1,10 @@
 # Auction Demo App Introduction
-
+Backend service app link https://github.com/Shakeel-Ahmed/Auction-App-Backend
 
 
 ## My Take:
 
-- The decision to utilize React JS with TypeScript for the frontend was a strategic one, driven by the assessment requirements and the need for a modern, robust framework.
+- The decision to utilize React JS with TypeScript for the frontend was a strategic one, driven by the requirements and the need for a modern, robust framework.
 - I chose Laravel 10 for the auction app backend because of its extensive feature set. Additionally, using multiple languages to collaborate within a single app is enjoyable for me.
 - While the application's UI may appear minimalistic, our primary objective was to deliver robust functionality and a seamless user experience.
 
